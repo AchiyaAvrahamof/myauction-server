@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const dotenv = require('dotenv')
 const cors = require('cors');
+app.use(cors())
 const express=require('express')
 const  mongoose  = require('mongoose')
 const app=express()
@@ -10,7 +11,6 @@ const port=5000
 const routes =require('./routes/index')
 const bodyParser=require('body-parser')
 require('dotenv').config()
-app.use(cors())
 
 mongoose.Promise=global.Promise
 mongoose.connect(process.env.DB,{useNewUrlParser:true})
