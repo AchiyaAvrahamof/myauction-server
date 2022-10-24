@@ -2,10 +2,10 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const dotenv = require('dotenv')
+const express=require('express')
 const app=express()
 const cors = require('cors');
 app.use(cors())
-const express=require('express')
 const  mongoose  = require('mongoose')
 const port=5000
 const routes =require('./routes/index')
